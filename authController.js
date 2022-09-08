@@ -28,15 +28,14 @@ class authController {
       //console.log(token)
       //return response.status(200).json({message: "User registered successfully"});
       //const token = generateAccessToken(username); 
-      //return response
-      // .cookie(tokenName, token, {
-      //   expires: new Date(Date.now() + 864000000),
-      //   httpOnly: true,
-      //   secure: true
-      // })
       return response
+      .cookie(tokenName, token, {
+        expires: new Date(Date.now() + 864000000),
+        httpOnly: true,
+        secure: true
+      })
       .status(200)
-      .json({ message: "User registered successfully"})
+      .json({ message: "User registered successfully", token: token})
     } catch (e) {
       console.log('Registration error' + e)
       response.status(400).json({message: 'Registration error'})
