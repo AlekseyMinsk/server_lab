@@ -28,7 +28,7 @@ class authController {
       //console.log(token)
       //return response.status(200).json({message: "User registered successfully"});
       //const token = generateAccessToken(username); 
-      return response
+      //return response
       // .cookie(tokenName, token, {
       //   expires: new Date(Date.now() + 864000000),
       //   httpOnly: true,
