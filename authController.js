@@ -31,7 +31,8 @@ class authController {
       return response
       .cookie(tokenName, token, {
         expires: new Date(Date.now() + 864000000),
-        httpOnly: true
+        httpOnly: true,
+        secure: true
       })
       .status(200)
       .json({ message: "User registered successfully"})
