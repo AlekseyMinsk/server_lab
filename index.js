@@ -10,7 +10,7 @@ app.use(cookieParser());
 //app.use(cors());
 app.use(
     cors({
-        origin: 'https://dep-client-lab.herokuapp.com',
+        origin: ['https://dep-client-lab.herokuapp.com', 'http://localhost:3000'],
         credentials: true,
     })
 );
