@@ -29,11 +29,12 @@ class authController {
       //return response.status(200).json({message: "User registered successfully"});
       //const token = generateAccessToken(username); 
       return response
-      .cookie(tokenName, token, {
-        expires: new Date(Date.now() + 864000000),
-        httpOnly: true,
-        secure: true
-      })
+      // .cookie(tokenName, token, {
+      //   expires: new Date(Date.now() + 864000000),
+      //   httpOnly: true,
+      //   secure: true
+      // })
+      return response
       .status(200)
       .json({ message: "User registered successfully"})
     } catch (e) {
